@@ -1,0 +1,16 @@
+# Virial Mass of Active Galactic Nuclei 
+## Introduction
+
+AGN or Active Galactic Nuclei are the objects found at centers of galaxies which continuously emit large amounts of radiation. Blackholes, Quasars, Blazars, etc are different types of AGN. These objects are so massive, that their masses can exceed a billion solar masses. The accretion disk around AGN is classified in two parts, namely Broad Line Region and Narrow Line Region based on the radiation spectrum that they emit. So the mass estimation techniques used for such objects are not straightforward. The widely accepted method is known as "Reverberation Mapping". The virial equation is given as M_BH =G* f* R_BLR* (ΔV)^2, where ΔV is the rotational velocity of gas and R_BLR is the radius of BLR region of accretion disk and f is a proportionality factor that depends on each system.
+## Reverberation Mapping
+Reverberation Mapping is based on time delay in radiation. The accretion disks are spread over a few light days distance. The radiation coming out of the AGNs varies with time. Therefore, the radiation flux of the AGN itself reaches the BLR region after a certain delay. This time delay is mapped in order to measure the distance of BLR from the AGN. This is how the R_BLR term is measured. The ΔV is measured using spectroscopy. Finally these two seperate measurements allow us to measure the mass of AGN.
+A simplification of reverberation mapping is called as Single Epoch Mass Determination method. Instead of continuously measuring the delay over time, this method measures the velocity of the BLR gas at only one single moment. This method constrains the mass value depending on the observed velocity. The formula therefore becomes M_BH =  G* f* R_BLR* (FWHM_obs)^2 where FWHM_obs= full width at half maximum. But considering the BLR radius and luminosity relation R_BLR ∝ (L_λ)^α, we can rewrite the above equation as: 
+log M_BH = α + βlog (L/ 10^44) + γlog(FWHM/1000)
+
+## Empirical Parameters
+In this equation, the constants α and β are called the empirical constants as they determine the accuracy of the predicted mass. However, they are not universal constants. In order to verify that the observed mass using above techniques match the theoretical prediction, the value of these parameters must be calibrated to give best fit. However, in literature, for every system these parameters are uniquely determined. Therefore there is no synchronous way to predict the range that these parameters can have. Therefore in this project the empirical parameters are optimized iteratively based on the standard dataset provided. The algorithm minimizes the mean squared error of the fit in each iteration, giving the best possible value of α and β for input dataset. The results of the optimization can be seen in the project report. Also, one of the optimization result is shown below, where the first image shows the error in mass prediction with unoptimized empirical parameters while the second is the mass predicted after optimization.
+
+![Before optimization](https://github.com/user-attachments/assets/b67bd1e6-b618-455a-bbca-0d24e849f7e4)
+![After optimization](https://github.com/user-attachments/assets/604adce5-9ee2-4c66-b7d5-bbac8bdd43a8)
+
+
